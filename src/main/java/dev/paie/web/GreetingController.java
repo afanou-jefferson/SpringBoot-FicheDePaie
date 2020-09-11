@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 
 import dev.paie.entite.Greeting;
 
-@Controller
+@Controller // Ask Rossi différence entre @Controller et @RESTController
 public class GreetingController { // https://spring.io/guides/gs/handling-form-submission/
 
 	@GetMapping("/greeting")

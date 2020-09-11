@@ -55,7 +55,11 @@
 			<scope>runtime</scope>
 		</dependency>
 		
-		
+		<!--  Afficher les vues HTMl https://spring.io/guides/gs/handling-form-submission/ -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-thymeleaf</artifactId>
+		</dependency>
 
 
 	</dependencies>
@@ -68,15 +72,6 @@
 			</plugin>
 		</plugins>
 		
-		 <resources>
-            <resource>
-                <directory>src/main/resources</directory>
-                <targetPath>${project.build.outputDirectory}</targetPath>
-                <includes>
-                    <include>application.properties</include>
-                </includes>
-            </resource>
-        </resources>
 	</build>
 
 </project>
