@@ -5,6 +5,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+import dev.paie.web.entreprise.EntrepriseRequestDto;
+
 @Entity
 public class Entreprise {
 
@@ -16,6 +18,27 @@ public class Entreprise {
 	private String adresse;
 	private String urssaf;
 	private String codeNaf;
+
+	public Entreprise() {
+	}
+
+	public Entreprise(EntrepriseRequestDto dto) {
+		super();
+		this.siret = dto.getSiret();
+		this.denomination = dto.getDenomination();
+		this.adresse = dto.getAdresse();
+		this.urssaf = dto.getUrssaf();
+		this.codeNaf = dto.getCodeNaf();
+	}
+
+	public Entreprise(String siret, String denomination, String adresse, String urssaf, String codeNaf) {
+		super();
+		this.siret = siret;
+		this.denomination = denomination;
+		this.adresse = adresse;
+		this.urssaf = urssaf;
+		this.codeNaf = codeNaf;
+	}
 
 	public String getDenomination() {
 		return denomination;
