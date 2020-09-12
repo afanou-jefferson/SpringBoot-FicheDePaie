@@ -45,11 +45,10 @@ public class EntrepriseController {
 		List<Entreprise> listeE = eService.listerEntreprise();
 
 		if (!listeE.isEmpty()) {
-			return ResponseEntity.status(HttpStatus.OK).header("message", "Entreprisée trouvée").body(listeE);
+			return ResponseEntity.status(HttpStatus.OK).header("message", "Entreprises trouvées").body(listeE);
 
 		} else { // listeE.isEmpty = true
-			return ResponseEntity.status(HttpStatus.NOT_FOUND)
-					.body("Aucune entreprise enregistré en BDD ");
+			return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Aucune entreprise enregistré en BDD ");
 		}
 	}
 

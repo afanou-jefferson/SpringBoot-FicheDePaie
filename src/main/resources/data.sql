@@ -119,3 +119,6 @@ INSERT INTO periode (id, date_debut, date_fin) VALUES (9, '2019-09-01', '2019-09
 INSERT INTO periode (id, date_debut, date_fin) VALUES (10, '2019-10-01', '2019-10-31');
 INSERT INTO periode (id, date_debut, date_fin) VALUES (11, '2019-11-01', '2019-11-30');
 INSERT INTO periode (id, date_debut, date_fin) VALUES (12, '2019-12-01', '2019-12-31');
+
+INSERT INTO remuneration_employe (id, matricule, entreprise_id, grade_id, profil_remuneration_id) VALUES (1, "abcdefgh", 1 , 1 ,1);
+INSERT INTO bulletin_salaire (id, prime_exceptionnelle, periode_id, remuneration_employe_id) VALUES (1, 12, 1, 1);
