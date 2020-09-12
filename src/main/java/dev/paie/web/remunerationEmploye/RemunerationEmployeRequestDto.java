@@ -11,7 +11,7 @@ public class RemunerationEmployeRequestDto {
 	private int idEntreprise;
 
 	@NotNull
-	private int idProfilRmu;
+	private int idProfilRemu;
 
 	@NotNull
 	private int idGrade;
@@ -32,12 +32,12 @@ public class RemunerationEmployeRequestDto {
 		this.idEntreprise = idEntreprise;
 	}
 
-	public int getIdProfilRmu() {
-		return idProfilRmu;
+	public int getIdProfilRemu() {
+		return idProfilRemu;
 	}
 
-	public void setIdProfilRmu(int idProfilRmu) {
-		this.idProfilRmu = idProfilRmu;
+	public void setIdProfilRemu(int idProfilRmu) {
+		this.idProfilRemu = idProfilRmu;
 	}
 
 	public int getIdGrade() {

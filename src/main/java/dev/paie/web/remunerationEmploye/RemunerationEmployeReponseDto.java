@@ -10,7 +10,7 @@ public class RemunerationEmployeReponseDto extends RemunerationEmployeRequestDto
 		this.id = remuEmp.getId();
 		this.setMatricule(remuEmp.getMatricule());
 		this.setIdEntreprise(remuEmp.getEntreprise().getId());
-		this.setIdProfilRmu(remuEmp.getProfilRemuneration().getId());
+		this.setIdProfilRemu(remuEmp.getProfilRemuneration().getId());
 		this.setIdGrade(remuEmp.getGrade().getId());
 	}
 

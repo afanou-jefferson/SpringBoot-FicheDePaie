@@ -36,7 +36,7 @@ public class RemunerationEmployeService {
 
 		Optional<Entreprise> entrepriseNewRemu = repoEntreprise.findById(dto.getIdEntreprise());
 
-		Optional<ProfilRemuneration> profilNewRemu = profilRepo.findById(dto.getIdProfilRmu());
+		Optional<ProfilRemuneration> profilNewRemu = profilRepo.findById(dto.getIdProfilRemu());
 
 		Optional<Grade> gradeNewRemu = repoGrade.findById(dto.getIdGrade());
 
