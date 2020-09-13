@@ -24,7 +24,7 @@ public class BulletinSalaireController {
 	@GetMapping("all")
 	public ResponseEntity<?> getAllBulletins() {
 
-		List<BulletinSalaireRequestDto> listeB = bService.listerBulletins();
+		List<BulletinSalaireReponseDto> listeB = bService.listerBulletins();
 
 		if (!listeB.isEmpty()) {
 			return ResponseEntity.status(HttpStatus.OK).header("message", "Bulletins trouvés").body(listeB);

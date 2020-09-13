@@ -8,7 +8,6 @@ import org.springframework.stereotype.Service;
 import dev.paie.entite.BulletinSalaire;
 import dev.paie.repository.BulletinSalaireRepository;
 import dev.paie.web.bulletinSalaire.BulletinSalaireReponseDto;
-import dev.paie.web.bulletinSalaire.BulletinSalaireRequestDto;
 
 @Service
 public class BulletinSalaireService {
@@ -19,9 +18,9 @@ public class BulletinSalaireService {
 		this.repoBulletin = repoBulletin;
 	}
 
-	public List<BulletinSalaireRequestDto> listerBulletins() {
+	public List<BulletinSalaireReponseDto> listerBulletins() {
 
-		List<BulletinSalaireRequestDto> listeDto = new ArrayList();
+		List<BulletinSalaireReponseDto> listeDto = new ArrayList();
 
 		List<BulletinSalaire> listeB = repoBulletin.findAll();
 

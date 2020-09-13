@@ -15,7 +15,9 @@ public class Cotisation {
 	private Integer id;
 	private String code;
 	private String libelle;
+
 	private BigDecimal tauxSalarial;
+
 	private BigDecimal tauxPatronal;
 	private Boolean imposable = false;
 

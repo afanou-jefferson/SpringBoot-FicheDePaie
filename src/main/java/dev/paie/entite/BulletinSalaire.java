@@ -1,7 +1,9 @@
 package dev.paie.entite;
 
 import java.math.BigDecimal;
+import java.time.LocalDateTime;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -20,7 +22,15 @@ public class BulletinSalaire {
 
 	@OneToOne
 	private Periode periode;
+
 	private BigDecimal primeExceptionnelle;
+
+	@Column(name = "date_creation", columnDefinition = "TIMESTAMP DEFAULT CURRENT_TIMESTAMP") // Permet de définir la
+																								// date de création de
+																								// // l'enregistrement
+																								// par
+																								// défaut en BDD
+	private LocalDateTime dateCreation;
 
 	public RemunerationEmploye getRemunerationEmploye() {
 		return remunerationEmploye;
@@ -52,6 +62,14 @@ public class BulletinSalaire {
 
 	public void setId(Integer id) {
 		this.id = id;
+	}
+
+	public LocalDateTime getDateCreation() {
+		return dateCreation;
+	}
+
+	public void setDateCreation(LocalDateTime dateCreation) {
+		this.dateCreation = dateCreation;
 	}
 
 }
