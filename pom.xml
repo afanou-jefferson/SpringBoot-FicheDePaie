@@ -47,14 +47,6 @@
 			</exclusions>
 		</dependency>
 
-
-		<!-- Dépendence MySQL -->
-		<dependency>
-			<groupId>mysql</groupId>
-			<artifactId>mysql-connector-java</artifactId>
-			<scope>runtime</scope>
-		</dependency>
-
 		<!-- Afficher les vues HTMl https://spring.io/guides/gs/handling-form-submission/ -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -69,8 +61,6 @@
 			<version>2.0.1.Final</version>
 		</dependency>
 
-
-
 	</dependencies>
 
 	<build>
@@ -82,5 +72,37 @@
 		</plugins>
 
 	</build>
+
+	<profiles>
+
+		<profile>
+			<id> local</id>
+			<dependencies>
+				<dependency>
+					<!-- Dépendence MySQL -->
+					<groupId>mysql</groupId>
+					<artifactId>mysql-connector-java</artifactId>
+					<scope>runtime</scope>
+				</dependency>
+			</dependencies>
+		</profile>
+
+		<profile>
+			<id> heroku </id>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
+			<dependencies>
+				<!-- https://mvnrepository.com/artifact/org.postgresql/postgresql -->
+				<dependency>
+					<groupId>org.postgresql</groupId>
+					<artifactId>postgresql</artifactId>
+					<version>42.2.14</version>
+				</dependency>
+			</dependencies>
+
+		</profile>
+
+	</profiles>
 
 </project>
