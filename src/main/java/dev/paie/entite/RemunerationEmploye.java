@@ -5,7 +5,6 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
-import javax.persistence.OneToOne;
 
 @Entity
 public class RemunerationEmploye {
@@ -19,10 +18,10 @@ public class RemunerationEmploye {
 	@ManyToOne
 	private Entreprise entreprise;
 
-	@OneToOne
+	@ManyToOne
 	private ProfilRemuneration profilRemuneration;
 
-	@OneToOne
+	@ManyToOne
 	private Grade grade;
 
 	public RemunerationEmploye() {

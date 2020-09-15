@@ -8,7 +8,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.OneToOne;
+import javax.persistence.ManyToOne;
 
 @Entity
 public class BulletinSalaire {
@@ -17,19 +17,16 @@ public class BulletinSalaire {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Integer id;
 
-	@OneToOne
+	@ManyToOne
 	private RemunerationEmploye remunerationEmploye;
 
-	@OneToOne
+	@ManyToOne
 	private Periode periode;
 
 	private BigDecimal primeExceptionnelle;
 
-	@Column(name = "date_creation", columnDefinition = "TIMESTAMP DEFAULT CURRENT_TIMESTAMP") // Permet de définir la
-																								// date de création de
-																								// // l'enregistrement
-																								// par
-																								// défaut en BDD
+	// Permet de définir la date de création de l'enregistrement par défaut en BDD
+	@Column(name = "date_creation", columnDefinition = "TIMESTAMP DEFAULT CURRENT_TIMESTAMP")
 	private LocalDateTime dateCreation;
 
 	public RemunerationEmploye getRemunerationEmploye() {
